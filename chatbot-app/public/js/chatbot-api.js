@@ -32,6 +32,12 @@ export async function chatbot(message) {
     switch(res.queryResult.action) {
         case 'input.ask.time':
             return (new Date()).toLocaleTimeString()
+        case 'input.ask.product':
+            switch(true){
+                case (res.queryResult.parameters.product.indexOf(water) >= 0):
+                    return '5 baht'
+            }
+            const product = res.queryResult.parameters.product
     }
 
     return res.queryResult.fulfillmentText;
