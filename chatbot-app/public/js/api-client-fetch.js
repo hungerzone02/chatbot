@@ -1,7 +1,7 @@
 'use strict';
 
-export async function send(url, method, data, header) {
-    method = method,toUpperCase();
+export async function send(url, method, data, headers) {
+    method = method.toUpperCase();
     const init = {
         method: method,
     };
@@ -28,5 +28,5 @@ export async function get(url, data, headers) {
 }
 
 export async function post(url, data, headers) {
-    return await send(url, 'POST', data, headers);
+    return await send(url,'POST',data,headers);
 }

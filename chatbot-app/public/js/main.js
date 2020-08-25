@@ -1,7 +1,7 @@
 'use strict';
 
 import {getUserInputMessage, addMessage} from './chat.js';
-import {chatbot} from './chatbot-regexp.js';
+import {chatbot} from './chatbot-api.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener('click', async(ev) => {
